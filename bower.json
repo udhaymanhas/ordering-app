@@ -1,0 +1,23 @@
+{
+  "name": "ordering-app",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Udhay Singh Manhas"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/udhaymanhas/ordering-app",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-material": "^1.1.8",
+    "angular-google-maps": "^2.4.1",
+    "angular-ui-router": "^1.0.15"
+  }
+}

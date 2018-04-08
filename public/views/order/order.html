@@ -1,0 +1,60 @@
+<md-toolbar class="md-whiteframe-2dp">
+  <div class="md-toolbar-tools content">
+      <span class='special-text' >Ordering App</span>
+      <span flex></span>
+      <md-button ui-sref="home"  >
+          Home
+      </md-button>
+      <md-button ui-sref="track"  >
+          Track
+      </md-button>
+    </div>
+</md-toolbar>
+<div layout="row" layout-align="center center">
+  <div flex="30"></div>
+  <div flex="40" layout-align="center center">
+    <form name="orderForm" novalidate>
+        <md-input-container flex>
+          <label>Address</label>
+          <input required ng-model="order.address" type="text">
+          <div ng-messages="orderForm.order.address.$error" ng-if='orderForm.order.address.$dirty'>
+            <div ng-message="required">Field required.</div>
+          </div>
+        </md-input-container>
+        <md-input-container flex>
+          <label>Lattitude</label>
+          <input required ng-model="order.lattitude" type="text">
+          <div ng-messages="orderForm.order.lattitude.$error" ng-if='orderForm.order.lattitue.$dirty'>
+            <div ng-message="required">Field required.</div>
+          </div>
+        </md-input-container>
+        <md-input-container flex>
+          <label>Longitude</label>
+          <input required ng-model="order.longitude" type="text">
+          <div ng-messages="orderForm.order.longitude.$error" ng-if='orderForm.order.lattitue.$dirty'>
+            <div ng-message="required">Field required.</div>
+          </div>
+        </md-input-container>
+        <md-input-container flex>
+          <label>Restraunt Name</label>
+          <input required ng-model="order.restraunt" type="text">
+          <div ng-messages="orderForm.order.restraunt.$error" ng-if='orderForm.order.restraunt.$dirty'>
+            <div ng-message="required">Field required.</div>
+          </div>
+        </md-input-container>
+        <md-input-container flex>
+          <label>Item</label>
+          <input required ng-model="order.item" type="text">
+          <div ng-messages="orderForm.order.item.$error" ng-if='orderForm.order.item.$dirty'>
+            <div ng-message="required">Field required.</div>
+          </div>
+        </md-input-container>
+        <md-input-container>
+          <md-button ng-disabled="orderForm.$invalid || submitProgress" class="md-raised md-primary" ng-click="submit()">
+            <span ng-show="!submitProgress">Place Order</span>
+            <md-progress-circular style="margin:auto" ng-show="submitProgress" class="md-warn md-hue-2" md-diameter="20px"></md-progress-circular>
+        </md-input-container>
+    </form>
+  </div>
+  <div flex="30"></div>
+</div>

@@ -1,0 +1,20 @@
+<md-toolbar class="md-whiteframe-2dp">
+  <div class="md-toolbar-tools content">
+      <span class='special-text' >Ordering App</span>
+      <span flex></span>
+      <md-button ui-sref="home"  >
+          Home
+      </md-button>
+      <md-button ui-sref="order"  >
+          Order
+      </md-button>
+    </div>
+</md-toolbar>
+<div layout="row" layout-align="center center">
+  <div flex="30"></div>
+  <div flex="40" layout-align="center center">
+    Track your order here
+    <ui-gmap-google-map center='map.center' zoom='map.zoom'></ui-gmap-google-map>
+  </div>
+  <div flex="30"></div>
+</div>

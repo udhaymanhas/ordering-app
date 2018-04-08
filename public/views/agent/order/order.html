@@ -1,0 +1,25 @@
+<md-toolbar layout="row" >
+  <div class="md-toolbar-tools">
+    <span>Orders</span>
+  </div>
+</md-toolbar>
+<div layout="row" layout-align="center center">
+  <div flex="30"></div>
+  <div flex="40" layout-align="center center">
+    <md-content>
+      <md-list flex>
+        <md-list-item class="md-2-line md-padding" ng-repeat="order in orders track by $index" ng-click="null">
+          <div class="md-list-item-text">
+            <h3>Restraunt:{{order.restraunt}}</h3>
+            <h4>Deliver At:{{order.address.text}}</h4>
+            <p>Items: {{order.item}}</p>
+            <md-button ng-if="order.status == 'assigned'" style="float:right" ng-disabled="true" class="md-raised md-primary">Assigned</md-button>
+            <md-button ng-if="order.status == 'delivered'" style="float:right" ng-disabled="true" class="md-primary">Delivered</md-button>
+            <md-button ng-if="order.status != 'assigned'" style="float:right" class="md-raised md-primary" ng-click="acceptOrder($index)">Accept</md-button>
+          </div>
+        </md-list-item>
+      </md-list>
+    </md-content>
+  </div>
+  <div flex="30"></div>
+</div>

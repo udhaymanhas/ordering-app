@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+  <head>
+    <base href="/" />
+    <link rel="stylesheet" href="/bower_components/angular-material/angular-material.css">
+
+    <script src='//maps.googleapis.com/maps/api/js?sensor=false'></script>
+    <script src="socket.io/socket.io.js"></script>
+
+    <script src="/bower_components/lodash/dist/lodash.js"></script>
+    <script src="/bower_components/angular/angular.js"></script>
+    <script src="/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="/bower_components/angular-material/angular-material.js"></script>
+    <script src="/bower_components/angular-animate/angular-animate.min.js"></script>
+    <script src="/bower_components/angular-aria/angular-aria.js"></script>
+    <script src="/bower_components/angular-messages/angular-messages.min.js"></script>
+    <script src="/bower_components/angular-simple-logger/dist/angular-simple-logger.js"></script>
+    <script src="/bower_components/angular-google-maps/dist/angular-google-maps.js"></script>
+  </head>
+  <body ng-app="ordering-app">
+    <div layout="row">
+      <div flex>
+        <div ui-view></div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script src="middlewares/auth.middleware.js"></script>
+    <script src="config/app.config.js"></script>
+    <script src="services/auth.service.js"></script>
+    <script src="services/user.service.js"></script>
+    <script src="services/order.service.js"></script>
+    <script src="services/location.service.js"></script>
+    <script src="controllers/login.controller.js"></script>
+    <script src="controllers/home.controller.js"></script>
+    <script src="controllers/order.controller.js"></script>
+    <script src="controllers/track.controller.js"></script>
+
+    <script src="services/agent/agent.user.service.js"></script>
+    <script src="services/agent/agent.order.service.js"></script>
+    <script src="controllers/agent/agent.login.controller.js"></script>
+    <script src="controllers/agent/agent.order.controller.js"></script>
+  </body>
+</html>

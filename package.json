@@ -1,0 +1,30 @@
+{
+  "name": "ordering-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "./node_modules/bower/bin/bower install",
+    "start": "node server/server.js",
+    "start-watch": "nodemon server/server.js"
+  },
+  "engine": {
+    "node": "9.5.0"
+  },
+  "author": "Udhay Singh Manhas",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.2",
+    "bower": "^1.8.4",
+    "express": "^4.16.2",
+    "jsonwebtoken": "^8.2.1",
+    "lodash": "^4.15.0",
+    "mongoose": "~4.5.9",
+    "socket.io": "^2.1.0",
+    "validator": "^9.4.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.10.2"
+  }
+}
